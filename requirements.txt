@@ -1,0 +1,22 @@
+echo @"
+# CORE - Pacotes essenciais (versões compatíveis com Windows)
+pandas>=2.1.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# WEB E DADOS
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# VISUALIZAÇÃO
+plotly>=5.18.0
+streamlit>=1.28.0
+
+# UTILITÁRIOS
+python-dotenv>=1.0.0
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# ANÁLISE (versões mais leves)
+scikit-learn>=1.3.0  # Não exige compilação pesada
+"@ > requirements_simples.txt
