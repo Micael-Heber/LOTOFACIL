@@ -1,3 +1,73 @@
+# 🎰 Lotofácil - Gerador Inteligente de Palpites
+
+Sistema completo para análise estatística e geração de palpites otimizados para a Lotofácil, com autenticação de usuários e interface web.
+
+---
+
+## 📋 Índice
+
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalação](#instalação)
+- [Como Usar](#como-usar)
+- [Lógica do Algoritmo](#lógica-do-algoritmo)
+- [Segurança](#segurança)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+- [Aviso Legal](#aviso-legal)
+
+---
+
+## 📖 Sobre o Projeto
+
+Este projeto foi desenvolvido para auxiliar apostadores da Lotofácil na escolha de números com base em análise estatística avançada do histórico completo de concursos. Diferente de uma simples escolha aleatória, o algoritmo analisa padrões de frequência, atrasos, distribuição par/ímpar, soma dos números e outros fatores para sugerir combinações com maior probabilidade estatística. O sistema inclui backend em Python (Flask) com API REST para autenticação e geração de palpites, interface web responsiva que simula um aplicativo mobile, sistema de cadastro e login de usuários com senhas criptografadas e um algoritmo otimizado que processa milhares de concursos em segundos.
+
+---
+
+## ✨ Funcionalidades
+
+- [x] Cadastro de usuários com e-mail e senha segura.
+- [x] Login com autenticação via token JWT.
+- [x] Geração de palpites baseada em análise estatística do histórico real.
+- [x] Exibição visual da cartela com os números selecionados.
+- [x] Cálculo de estatísticas do palpite (pares, ímpares, soma, primos, distribuição).
+- [x] Proteção de rotas para que apenas usuários autenticados possam gerar palpites.
+- [x] Armazenamento local em JSON (fácil de migrar para banco de dados).
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+**Backend:** Python 3.10+, Flask, Flask-CORS, PyJWT, bcrypt, pandas, numpy.  
+**Frontend:** HTML5, CSS3, JavaScript (Fetch API), design responsivo (mobile-friendly).  
+**Armazenamento:** Arquivos JSON (para usuários) e CSV (histórico de concursos).
+
+---
+
+## 📁 Estrutura do Projeto
+
+lotofacil/
+├── data/
+│ ├── historico.csv # Histórico completo de concursos
+│ └── usuarios.json # Usuários cadastrados (gerado automaticamente)
+├── src/
+│ ├── init.py
+│ ├── analyzer.py # Análise estatística
+│ ├── data_fetcher.py # Download de dados
+│ ├── predictor.py # Previsões
+│ └── utils.py # Funções auxiliares
+├── venv/ # Ambiente virtual (não versionado)
+├── app.py # Backend Flask (API)
+├── gerador_final.py # Algoritmo de geração de palpites
+├── login.py # Sistema de login via terminal (legado)
+├── criar_admin.py # Criação de usuário admin (legado)
+├── index.html # Frontend (interface web)
+├── requirements.txt # Dependências do projeto
+└── README.md # Este arquivo
+
+
 ---
 
 ## 🚀 Instalação
